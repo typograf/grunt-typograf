@@ -24,7 +24,7 @@ module.exports = function (grunt) {
 					mode   : 'digit',           // Entities as digits
 					disable: ['ru/optalign/*'], // Disable rules
 					enable : ['ru/money/ruble'] // Enable rules
-				 },
+				},
 
 				files: {
 					'hello.txt': ['header.txt', 'footer.txt']
