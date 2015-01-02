@@ -6,8 +6,7 @@
  * Licensed under the MIT license.
  */
 
-var path = require('path'),
-	Typograf = require('typograf');
+var Typograf = require('typograf');
 
 module.exports = function (grunt) {
 	grunt.registerMultiTask('typograf', 'Prepare texts with typograf', function () {
