@@ -1,6 +1,6 @@
 /*
- * grunt-snakeskin
- * https://github.com/kobezzza/grunt-snakeskin
+ * grunt-typograf
+ * https://github.com/typograf/grunt-typograf
  *
  * Copyright (c) 2014 Kobezzza
  * Licensed under the MIT license.
