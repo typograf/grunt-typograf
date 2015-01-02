@@ -11,7 +11,7 @@ npm install grunt-typograf --save-dev
 
 ## Usage
 
-*Gruntfile.js*
+**Gruntfile.js**
 
 ```js
 module.exports = function (grunt) {
