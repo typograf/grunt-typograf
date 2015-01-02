@@ -1,6 +1,6 @@
 # [grunt](http://gruntjs.com/)-typograf
 
-[![Build Status](https://travis-ci.org/typograf/grunt-typograf.png?branch=master)](https://travis-ci.org/typograf/grunt-typograf)
+[![Build Status](https://travis-ci.org/typograf/grunt-typograf.png?branch=master)](https://travis-ci.org/typograf/grunt-typograf) [![Dependency Status](https://david-dm.org/typograf/grunt-typograf.svg)](https://david-dm.org/typograf/grunt-typograf) [![devDependency Status](https://david-dm.org/typograf/grunt-typograf/dev-status.svg)](https://david-dm.org/typograf/grunt-typograf#info=devDependencies)
 
 Prepare texts with typograf for Grunt.
 
