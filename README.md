@@ -1,6 +1,6 @@
 # [grunt](http://gruntjs.com/)-typograf [![Build Status](https://travis-ci.org/typograf/grunt-typograf.png?branch=master)](https://travis-ci.org/typograf/grunt-typograf) [![Dependency Status](https://david-dm.org/typograf/grunt-typograf.svg)](https://david-dm.org/typograf/grunt-typograf) [![devDependency Status](https://david-dm.org/typograf/grunt-typograf/dev-status.svg)](https://david-dm.org/typograf/grunt-typograf#info=devDependencies)
 
-Prepare texts with typograf for Grunt.
+Prepare texts with [Typograf](https://github.com/typograf/typograf) for Grunt.
 
 ## Install
 
@@ -35,3 +35,7 @@ module.exports = function (grunt) {
 	grunt.registerTask('default', ['typograf']);
 };
 ```
+
+## [License](https://github.com/typograf/grunt-typograf/blob/master/LICENSE)
+
+The MIT License.
