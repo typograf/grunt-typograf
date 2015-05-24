@@ -1,6 +1,6 @@
 {
   "name": "grunt-typograf",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Prepare texts with Typograf using Grunt.",
   "author": {
     "name": "kobezzza",
@@ -14,7 +14,7 @@
   "bugs": {
     "url": "https://github.com/typograf/grunt-typograf/issues"
   },
-  "licenses": "MIT",
+  "license": "MIT",
   "main": "Gruntfile.js",
   "keywords": [
     "gruntplugin",
