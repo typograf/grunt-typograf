@@ -100,8 +100,7 @@
 
   "disallowOperatorBeforeLineBreak": [
     "~",
-    ".",
-    "::"
+    "."
   ],
 
   "requireSpacesInFunctionDeclaration": {
