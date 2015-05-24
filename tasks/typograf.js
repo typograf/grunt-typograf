@@ -6,11 +6,13 @@
  * https://github.com/typograf/grunt-typograf/blob/master/LICENSE
  */
 
-var Typograf = require('typograf');
+var
+	Typograf = require('typograf');
 
 module.exports = function (grunt) {
 	grunt.registerMultiTask('typograf', 'Prepare texts with Typograf', function () {
-		var options = this.options(),
+		var
+			options = this.options(),
 			typograf = new Typograf(options);
 
 		if (options.disable) {
