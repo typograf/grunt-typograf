@@ -2,8 +2,8 @@
  * grunt-typograf
  * https://github.com/typograf/grunt-typograf
  *
- * Copyright (c) 2014 kobezzza
- * Licensed under the MIT license.
+ * Released under the MIT license
+ * https://github.com/typograf/grunt-typograf/blob/master/LICENSE
  */
 
 var Typograf = require('typograf');

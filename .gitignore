@@ -1,3 +1,4 @@
+# IDE
 .idea
 
 # Windows image file caches
@@ -8,7 +9,7 @@ ehthumbs.db
 Desktop.ini
 
 # Recycle Bin used on file shares
-$RECYCLE.BIN/
+$RECYCLE.BIN
 
 # Windows Installer files
 *.cab
@@ -19,17 +20,14 @@ $RECYCLE.BIN/
 # =========================
 # Operating System Files
 # =========================
-
 # OSX
 # =========================
-
 .DS_Store
 .AppleDouble
 .LSOverride
 
 # Icon must ends with two \r.
 Icon
-
 
 # Thumbnails
 ._*
@@ -38,8 +36,18 @@ Icon
 .Spotlight-V100
 .Trashes
 
-node_modules/
-libs/
-coverage/
-tmp/
-npm-debug.log
+# Dependencies
+bower_components
+node_modules
+
+# Build && test
+deploy
+coverage
+
+# Log
+*.log
+error.txt
+
+# Temporary
+*.tmp
+tmp

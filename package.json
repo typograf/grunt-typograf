@@ -1,6 +1,6 @@
 {
   "name": "grunt-typograf",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Prepare texts with Typograf using Grunt.",
   "author": {
     "name": "kobezzza",
@@ -40,7 +40,8 @@
   "devDependencies": {
     "grunt": "^0.4.5",
     "grunt-contrib-clean": "^0.6.0",
-    "grunt-contrib-jshint": "^0.10.0",
-    "grunt-contrib-nodeunit": "^0.4.1"
+    "grunt-contrib-jshint": "^0.11.2",
+    "grunt-contrib-nodeunit": "^0.4.1",
+    "jscs": "^1.13.1"
   }
 }
