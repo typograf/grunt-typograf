@@ -1,4 +1,4 @@
-/*
+/*!
  * grunt-typograf
  * https://github.com/typograf/grunt-typograf
  *
