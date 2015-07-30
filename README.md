@@ -1,4 +1,4 @@
-[grunt](http://gruntjs.com/)-typograf
+[grunt](http://gruntjs.com)-typograf
 =====================================
 
 [![NPM version](https://img.shields.io/npm/v/grunt-typograf.svg)](https://www.npmjs.com/package/grunt-typograf)
