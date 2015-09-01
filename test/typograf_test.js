@@ -1,3 +1,11 @@
+/*!
+ * grunt-typograf
+ * https://github.com/typograf/grunt-typograf
+ *
+ * Released under the MIT license
+ * https://github.com/typograf/grunt-typograf/blob/master/LICENSE
+ */
+
 var
 	grunt = require('grunt');
 

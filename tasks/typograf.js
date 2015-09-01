@@ -7,6 +7,9 @@
  */
 
 var
+	$C = require('collection.js').$C;
+
+var
 	Typograf = require('typograf');
 
 module.exports = function (grunt) {
@@ -23,31 +26,31 @@ module.exports = function (grunt) {
 			typograf.enable(options.enable);
 		}
 
-		this.files.forEach(function (f) {
-			var src = f.src.filter(function (filepath) {
-				if (grunt.file.exists(filepath)) {
-					return true;
-				}
+		function map(src) {
+			var res = '';
 
-				grunt.log.warn('Source file "' + filepath + '" not found.');
-				return false;
+			try {
+				res = typograf.execute(grunt.file.read(src));
 
-			}).map(function (filepath) {
-				var res = '';
+			} catch (err) {
+				grunt.log.error(err.message);
+			}
 
-				try {
-					res = typograf.execute(grunt.file.read(filepath));
+			return res;
+		}
 
-				} catch (err) {
-					grunt.log.error(err.message);
-				}
+		function filter(src) {
+			if (grunt.file.exists(src)) {
+				return true;
+			}
 
-				return res;
+			grunt.log.warn('Source file "' + src + '" not found.');
+			return false;
+		}
 
-			}).join('');
-
-			grunt.file.write(f.dest, src);
-			grunt.log.writeln('File "' + f.dest + '" created.');
+		$C(this.files).forEach(function (file) {
+			grunt.file.write(file.dest, $C(file.src).map(map, {filter: filter}).join(''));
+			grunt.log.writeln('File "' + file.dest + '" created.');
 		});
 	});
 };
