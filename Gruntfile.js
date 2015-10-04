@@ -38,7 +38,7 @@ module.exports = function (grunt) {
 			test2: {
 				options: {
 					lang: 'ru',
-					disable: ['common/punctuation/exclamation']
+					disable: ['ru/punctuation/exclamation']
 				},
 
 				files: {
