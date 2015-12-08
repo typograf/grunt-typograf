@@ -3,7 +3,7 @@
   "description": "Prepare texts with Typograf using Grunt.",
   "main": "Gruntfile.js",
   "license": "MIT",
-  "version": "4.0.0",
+  "version": "4.0.1",
   "author": {
     "name": "kobezzza",
     "email": "kobezzza@gmail.com",
