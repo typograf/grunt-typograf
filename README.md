@@ -12,7 +12,7 @@ Prepare texts with [Typograf](https://github.com/typograf/typograf) for Grunt.
 ## Install
 
 ```bash
-npm install grunt-typograf --save-dev
+npm install typograf grunt-typograf --save-dev
 ```
 
 ## Usage
