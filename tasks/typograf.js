@@ -7,9 +7,6 @@
  */
 
 var
-	$C = require('collection.js').$C;
-
-var
 	Typograf = require('typograf');
 
 module.exports = function (grunt) {
@@ -48,8 +45,8 @@ module.exports = function (grunt) {
 			return false;
 		}
 
-		$C(this.files).forEach(function (file) {
-			grunt.file.write(file.dest, $C(file.src).map(map, {filter: filter}).join(''));
+		this.files.forEach(function (file) {
+			grunt.file.write(file.dest, file.src.map(map, {filter: filter}).join(''));
 			grunt.log.writeln('File "' + file.dest + '" created.');
 		});
 	});
