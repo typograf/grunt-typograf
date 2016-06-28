@@ -26,6 +26,11 @@ module.exports = function (grunt) {
 		function map(src) {
 			var res = '';
 
+			if (!grunt.file.exists(src)) {
+				grunt.log.warn('Source file "' + src + '" not found.');
+				return res;
+			}
+
 			try {
 				res = typograf.execute(grunt.file.read(src));
 
@@ -36,17 +41,8 @@ module.exports = function (grunt) {
 			return res;
 		}
 
-		function filter(src) {
-			if (grunt.file.exists(src)) {
-				return true;
-			}
-
-			grunt.log.warn('Source file "' + src + '" not found.');
-			return false;
-		}
-
 		this.files.forEach(function (file) {
-			grunt.file.write(file.dest, file.src.map(map, {filter: filter}).join(''));
+			grunt.file.write(file.dest, file.src.map(map).join(''));
 			grunt.log.writeln('File "' + file.dest + '" created.');
 		});
 	});
