@@ -4,7 +4,7 @@
 [![NPM version](https://img.shields.io/npm/v/grunt-typograf.svg)](https://www.npmjs.com/package/grunt-typograf)
 [![NPM downloads](https://img.shields.io/npm/dm/grunt-typograf.svg)](https://www.npmjs.com/package/grunt-typograf)
 [![Dependency Status](https://david-dm.org/typograf/grunt-typograf.svg)](https://david-dm.org/typograf/grunt-typograf)
-[![devDependency Status](https://david-dm.org/typograf/grunt-typograf/dev-status.svg)](https://david-dm.org/typograf/grunt-typograf#info=devDependencies)
+[![devDependency Status](https://david-dm.org/typograf/grunt-typograf/dev-status.svg)](https://david-dm.org/typograf/grunt-typograf?type=dev)
 [![Build Status](https://travis-ci.org/typograf/grunt-typograf.png?branch=master)](https://travis-ci.org/typograf/grunt-typograf)
 
 Prepare texts with [Typograf](https://github.com/typograf/typograf) for Grunt.
