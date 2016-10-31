@@ -43,6 +43,42 @@ module.exports = function (grunt) {
 };
 ```
 
+### With additional options
+
+```js
+module.exports = function (grunt) {
+  grunt.initConfig({
+    typograf: {
+      compile: {
+        options: {
+          lang   : 'ru',
+          mode   : 'digit',
+          disable: ['ru/optalign/*'],
+          enable : ['ru/money/ruble'],
+          rules  : [
+            {
+              name: 'common/other/typographicalEmoticon',
+              handler: (text, settings) => text.replace(/:-\)/, ':—)')
+            },
+            {
+              name: 'common/other/trimLeft',
+              handler: (text, settings) => text.trimLeft()
+            }
+          ]
+        },
+
+        files: {
+          'hello.txt': ['header.txt', 'footer.txt']
+        }
+      }
+    }
+  });
+
+  grunt.loadNpmTasks('grunt-typograf');
+  grunt.registerTask('default', ['typograf']);
+};
+```
+
 ## [License](https://github.com/typograf/grunt-typograf/blob/master/LICENSE)
 
 The MIT License.

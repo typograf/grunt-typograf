@@ -1,3 +1,5 @@
+'use strict';
+
 /*!
  * grunt-typograf
  * https://github.com/typograf/grunt-typograf
@@ -6,23 +8,23 @@
  * https://github.com/typograf/grunt-typograf/blob/master/LICENSE
  */
 
-var
+const
 	grunt = require('grunt');
 
 exports.typograf = {
-	setUp: function (done) {
+	setUp(done) {
 		done();
 	},
 
-	test: function (test) {
+	test(test) {
 		test.expect(3);
 
-		var
+		const
 			input1 = grunt.file.read('tmp/test.txt'),
 			input2 = grunt.file.read('tmp/test2.txt'),
 			input3 = grunt.file.read('tmp/test3.txt');
 
-		var
+		const
 			expected1 = grunt.file.read('test/expected/test.txt').trim(),
 			expected2 = grunt.file.read('test/expected/test2.txt').trim(),
 			expected3 = grunt.file.read('test/expected/test3.txt').trim();

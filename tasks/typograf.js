@@ -1,3 +1,5 @@
+'use strict';
+
 /*!
  * grunt-typograf
  * https://github.com/typograf/grunt-typograf
@@ -6,13 +8,19 @@
  * https://github.com/typograf/grunt-typograf/blob/master/LICENSE
  */
 
-var
+const
 	Typograf = require('typograf');
 
 module.exports = function (grunt) {
 	grunt.registerMultiTask('typograf', 'Prepare texts with Typograf', function () {
-		var
-			opts = this.options(),
+		const
+			opts = this.options();
+
+		if (Array.isArray(opts.rules)) {
+			opts.rules.forEach((rule) => typeof rule === 'object' && Typograf.rule(rule));
+		}
+
+		const
 			typograf = new Typograf(opts);
 
 		if (opts.disable) {
@@ -24,10 +32,10 @@ module.exports = function (grunt) {
 		}
 
 		function map(src) {
-			var res = '';
+			let res = '';
 
 			if (!grunt.file.exists(src)) {
-				grunt.log.warn('Source file "' + src + '" not found.');
+				grunt.log.warn(`Source file "${src}" not found.`);
 				return res;
 			}
 
@@ -41,9 +49,9 @@ module.exports = function (grunt) {
 			return res;
 		}
 
-		this.files.forEach(function (file) {
+		this.files.forEach((file) => {
 			grunt.file.write(file.dest, file.src.map(map).join(''));
-			grunt.log.writeln('File "' + file.dest + '" created.');
+			grunt.log.writeln(`File "${file.dest}" created.`);
 		});
 	});
 };
