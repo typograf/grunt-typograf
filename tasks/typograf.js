@@ -9,7 +9,8 @@
  */
 
 const
-	Typograf = require('typograf');
+	Typograf = require('typograf'),
+	names = [];
 
 module.exports = function (grunt) {
 	grunt.registerMultiTask('typograf', 'Prepare texts with Typograf', function () {
@@ -17,19 +18,19 @@ module.exports = function (grunt) {
 			opts = this.options();
 
 		if (Array.isArray(opts.rules)) {
-			opts.rules.forEach((rule) => typeof rule === 'object' && Typograf.rule(rule));
+			opts.rules.forEach(function (rule) {
+				if (typeof rule === 'object' &&
+					typeof rule.name === 'string' &&
+					names.indexOf(rule.name) === -1
+				) {
+					Typograf.rule(rule);
+					names.push(rule.name);
+				}
+			});
 		}
 
 		const
 			typograf = new Typograf(opts);
-
-		if (opts.disable) {
-			typograf.disable(opts.disable);
-		}
-
-		if (opts.enable) {
-			typograf.enable(opts.enable);
-		}
 
 		function map(src) {
 			let res = '';

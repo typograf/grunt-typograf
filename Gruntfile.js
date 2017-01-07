@@ -45,6 +45,23 @@ module.exports = function (grunt) {
 				files: {
 					'tmp/test3.txt': 'test/fixtures/test3.txt'
 				}
+			},
+
+			test_own_rules: {
+				options: {
+					lang: 'ru',
+					rules: [
+						{
+							name: 'common/other/typographicalEmoticon',
+							handler: function(text, settings) {
+								return text.replace(/:-\)/, ':—)');
+							}
+						}
+					]
+				},
+				files: {
+					'tmp/test_own_rules.txt': 'test/fixtures/test_own_rules.txt'
+				}
 			}
 		},
 
