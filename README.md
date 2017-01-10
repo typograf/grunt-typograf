@@ -49,11 +49,18 @@ module.exports = function (grunt) {
         options: {
           lang: 'ru', // 'ru' or 'en'
           htmlEntity: {
-            type: 'digit' // Type of HTML entities: 'digit' - &#160, 'name' - &nbsp;, 'default' - UTF-8
+            // Type of HTML entities: 
+            // 'digit' - &#160, 
+            // 'name' - &nbsp;, 
+            // 'default' - UTF-8
+            type: 'digit'
           },
-          disable: ['ru/optalign/*'], // Disable rules
-          enable: ['ru/money/ruble'], // Enable rules
-          rules: [ // Own rules
+
+          disable: ['ru/optalign/*'],  // Disable rules
+          enable:  ['ru/money/ruble'], // Enable rules
+
+          // Own rules
+          rules: [ 
             {
               name: 'common/other/typographicalEmoticon',
               handler: (text, settings) => text.replace(/:-\)/, ':—)')

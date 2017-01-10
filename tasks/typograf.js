@@ -18,10 +18,12 @@ module.exports = function (grunt) {
 			opts = this.options();
 
 		if (Array.isArray(opts.rules)) {
-			opts.rules.forEach(function (rule) {
-				if (typeof rule === 'object' &&
+			opts.rules.forEach((rule) => {
+				if (
+					typeof rule === 'object' &&
 					typeof rule.name === 'string' &&
 					names.indexOf(rule.name) === -1
+
 				) {
 					Typograf.rule(rule);
 					names.push(rule.name);

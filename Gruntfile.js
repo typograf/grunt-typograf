@@ -53,7 +53,7 @@ module.exports = function (grunt) {
 					rules: [
 						{
 							name: 'common/other/typographicalEmoticon',
-							handler: function(text, settings) {
+							handler(text) {
 								return text.replace(/:-\)/, ':—)');
 							}
 						}
