@@ -17,7 +17,7 @@ module.exports = function (grunt) {
 		typograf: {
 			test: {
 				options: {
-					lang: 'ru'
+					locale: ['ru', 'en-US']
 				},
 
 				files: {
@@ -27,8 +27,8 @@ module.exports = function (grunt) {
 
 			test2: {
 				options: {
-					lang: 'ru',
-					disable: ['ru/punctuation/exclamation']
+					locale: ['ru', 'en-US'],
+					disableRule: ['ru/punctuation/exclamation']
 				},
 
 				files: {
@@ -38,8 +38,8 @@ module.exports = function (grunt) {
 
 			test3: {
 				options: {
-					lang: 'ru',
-					enable: ['ru/money/ruble']
+					locale: ['ru', 'en-US'],
+					enableRule: ['ru/money/ruble']
 				},
 
 				files: {
@@ -49,7 +49,7 @@ module.exports = function (grunt) {
 
 			test_own_rules: {
 				options: {
-					lang: 'ru',
+					locale: ['ru', 'en-US'],
 					rules: [
 						{
 							name: 'common/other/typographicalEmoticon',
