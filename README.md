@@ -25,7 +25,7 @@ module.exports = function (grunt) {
     typograf: {
       compile: {
         options: {
-          lang: 'ru'
+          locale: ['ru', 'en-US']
         },
         files: {
           'hello.txt': ['header.txt', 'footer.txt']
@@ -47,20 +47,20 @@ module.exports = function (grunt) {
     typograf: {
       compile: {
         options: {
-          lang: 'ru', // 'ru' or 'en'
+          locale: ['ru', 'en-US'],
           htmlEntity: {
-            // Type of HTML entities: 
-            // 'digit' - &#160, 
-            // 'name' - &nbsp;, 
+            // Type of HTML entities:
+            // 'digit' - &#160,
+            // 'name' - &nbsp;,
             // 'default' - UTF-8
             type: 'digit'
           },
 
-          disable: ['ru/optalign/*'],  // Disable rules
-          enable:  ['ru/money/ruble'], // Enable rules
+          disableRule: ['ru/optalign/*'],
+          enableRule:  ['ru/money/ruble'],
 
           // Own rules
-          rules: [ 
+          rules: [
             {
               name: 'common/other/typographicalEmoticon',
               handler: (text, settings) => text.replace(/:-\)/, ':—)')

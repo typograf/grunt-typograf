@@ -25,7 +25,7 @@ module.exports = function (grunt) {
 					names.indexOf(rule.name) === -1
 
 				) {
-					Typograf.rule(rule);
+					Typograf.addRule(rule);
 					names.push(rule.name);
 				}
 			});
