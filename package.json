@@ -29,11 +29,11 @@
     "test": "grunt test"
   },
   "devDependencies": {
-    "eslint": "^5.2.0",
-    "grunt": "^1.0.3",
-    "grunt-contrib-clean": "^1.0.0",
+    "eslint": "^5.16.0",
+    "grunt": "^1.0.4",
+    "grunt-contrib-clean": "^2.0.0",
     "grunt-contrib-nodeunit": "^2.0.0",
-    "typograf": "^6.7.2"
+    "typograf": "^6.8.2"
   },
   "peerDependencies": {
     "grunt": "*",
