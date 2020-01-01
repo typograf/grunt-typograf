@@ -3,7 +3,7 @@
   "description": "Prepare texts with Typograf using Grunt.",
   "main": "Gruntfile.js",
   "license": "MIT",
-  "version": "6.0.1",
+  "version": "6.0.2",
   "author": {
     "name": "kobezzza",
     "email": "kobezzza@gmail.com",
@@ -31,18 +31,18 @@
     "prepare": "npm run snyk-protect"
   },
   "devDependencies": {
-    "eslint": "^6.0.1",
+    "eslint": "^6.8.0",
     "grunt": "^1.0.4",
     "grunt-contrib-clean": "^2.0.0",
     "grunt-contrib-nodeunit": "^2.0.0",
-    "typograf": "^6.8.2"
+    "typograf": "^6.10.0"
   },
   "peerDependencies": {
     "grunt": "*",
-    "typograf": "^6.7.2"
+    "typograf": "^6.10.0"
   },
   "snyk": true,
   "dependencies": {
-    "snyk": "^1.230.5"
+    "snyk": "^1.271.0"
   }
 }
